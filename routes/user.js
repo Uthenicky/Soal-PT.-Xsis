@@ -46,7 +46,7 @@ module.exports = function(app){
  *               type: string
  *               example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
   *       404:
-  *         description: User not found or password incorect.
+  *         description: User not found.
   *         schema:
   *           type: object
   *           properties:
@@ -59,6 +59,20 @@ module.exports = function(app){
   *             message:
   *               type: string
   *               example: Data tidak ada
+  *       401:
+  *         description: Password incorect.
+  *         schema:
+  *           type: object
+  *           properties:
+  *             success:
+  *               type: boolean
+  *               example: false
+  *             status:
+  *               type: number
+  *               example: 401
+  *             message:
+  *               type: string
+  *               example: Password salah
   *       400:
   *         description: Validation error.
   *         schema:
