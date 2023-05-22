@@ -29,7 +29,7 @@ exports.Login = async (req, res) => {
       if (password != cek_user.password) {
         return res.status(401).json({
           success: false,
-          status: 404,
+          status: 401,
           message: "Password salah",
         })
       }
